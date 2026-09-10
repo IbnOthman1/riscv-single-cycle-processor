@@ -30,8 +30,6 @@ The core executes instructions in a single clock cycle across five steps:
 
 ## ALU Operations
 
-![ALU Control](alu_control.png)
-
 | ALU Lines | Operation |
 |:---:|:---:|
 | `0000` | AND |
