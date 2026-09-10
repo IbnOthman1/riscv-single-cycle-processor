@@ -60,5 +60,6 @@ The core was verified in QuestaSim/ModelSim using a test program designed to val
 00208463  # beq  x1, x2, label2   - Branch not taken test (x1 != x2)
 FFC0A303  # lw   x6, -4(x1)       - Negative offset load (signed immediate)
 FE108CE3  # beq  x1, x1, -8       - Backward loop branch (negative offset)
+````
 
 ![Simulation Waveform](waveform.jpg)
