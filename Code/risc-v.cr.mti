@@ -1,0 +1,92 @@
+{C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/Top module.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/Top module.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module riscv_top
+
+Top level modules:
+	riscv_top
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/alu_controller.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/alu_controller.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module alu_control
+
+Top level modules:
+	alu_control
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/TB.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/TB.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module tb_riscv_top
+
+Top level modules:
+	tb_riscv_top
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/immediate generator.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/immediate generator.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module immediate_generator
+
+Top level modules:
+	immediate_generator
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/program_counter.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/program_counter.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module pc
+
+Top level modules:
+	pc
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/main controller.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/main controller.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module main_controller
+
+Top level modules:
+	main_controller
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/second maximum number.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/second maximum number.sv}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module second_max_array_method
+
+Top level modules:
+	second_max_array_method
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/ALU.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/ALU.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/data_memory.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/data_memory.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module data_mem
+
+Top level modules:
+	data_mem
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/instruction_memory.v} {1 {vlog -work work -vopt -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/NTI Project/instruction_memory.v}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module instruction_mem
+
+Top level modules:
+	instruction_mem
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/maximum consecuative number.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/maximum consecuative number.sv}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module freq_zeros_vs_ones
+
+Top level modules:
+	freq_zeros_vs_ones
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/odd-even array.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/odd-even array.sv}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module array_partition
+
+Top level modules:
+	array_partition
+
+} {} {}} {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/frequency counter.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/mhmdm/Downloads/Verilog Projects/system verilog/frequency counter.sv}
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module freq_counter_array_methods
+
+Top level modules:
+	freq_counter_array_methods
+
+} {} {}}

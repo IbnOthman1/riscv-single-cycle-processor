@@ -1,0 +1,89 @@
+module riscv_top (
+    input  wire        CLK,
+    input  wire        RST,
+    input  wire [31:0] INSTR,
+    output wire [31:0] PC,
+    input  wire [31:0] Data_mem_read,
+    output wire [31:0] Data_mem_add,
+    output wire [31:0] Data_mem_write,
+    output wire        Data_mem_En,
+    output wire        Data_mem_Read
+);
+
+    wire [31:0] pc_next, pc_plus_4, pc_target;
+    wire        branch_taken;
+    wire        Branch, MemRead, MemToReg, MemWrite, ALUSrc, RegWrite;
+    wire [1:0]  ALUOp;
+    wire [3:0]  ALUControl;
+    wire [31:0] imm;
+    wire [31:0] read_data_1, read_data_2, write_data;
+    wire [31:0] alu_b;
+    wire [31:0] alu_result;
+    wire        Zero;
+
+    assign pc_plus_4 = PC + 32'd4;
+    assign pc_target = PC + imm;
+
+    assign branch_taken = Branch & Zero;
+
+    assign pc_next = branch_taken ? pc_target : pc_plus_4;
+
+    assign alu_b = ALUSrc ? imm : read_data_2;
+
+    assign write_data = MemToReg ? Data_mem_read : alu_result;
+
+    assign Data_mem_add   = alu_result;
+    assign Data_mem_write = read_data_2;
+    assign Data_mem_En    = MemWrite;
+    assign Data_mem_Read  = MemRead;
+
+    pc u_pc (
+        .clk        (CLK),
+        .rst        (RST),
+        .pc_next    (pc_next),
+        .pc_current (PC)
+    );
+
+    register u_regfile (
+        .clk       (CLK),
+        .RegWrite  (RegWrite),
+        .ReadReg1  (INSTR[19:15]),
+        .ReadReg2  (INSTR[24:20]),
+        .WriteReg  (INSTR[11:7]),
+        .write_data(write_data),
+        .read_data1(read_data_1),
+        .read_data2(read_data_2)
+    );
+
+    alu u_alu (
+        .a         (read_data_1),
+        .b         (alu_b),
+        .ctrl      (ALUControl),
+        .result    (alu_result),
+        .zero_flag (Zero)
+    );
+
+    immediate_generator u_imm_gen (
+        .instr (INSTR),
+        .imm   (imm)
+    );
+
+    main_controller u_main_ctrl (
+        .opcode   (INSTR[6:0]),
+        .Branch   (Branch),
+        .MemRead  (MemRead),
+        .MemToReg (MemToReg),
+        .ALUOp    (ALUOp),
+        .MemWrite (MemWrite),
+        .ALUSrc   (ALUSrc),
+        .RegWrite (RegWrite)
+    );
+
+    alu_control u_alu_ctrl (
+        .ALUOp      (ALUOp),
+        .funct3     (INSTR[14:12]),
+        .funct7     (INSTR[30]),
+        .ALUControl (ALUControl)
+    );
+
+endmodule
